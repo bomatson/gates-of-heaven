@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'gates_of_heaven/cli'
+GatesOfHeaven::CLI.start
