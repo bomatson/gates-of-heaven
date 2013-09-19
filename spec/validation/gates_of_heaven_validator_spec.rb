@@ -18,12 +18,31 @@ module ActiveModel
        subject { BasicUser.new }
 
        context 'which are not good enough for heaven' do
-         before do
-           subject.password = 'foo'
+         let(:too_short) { 'foo' }
+         let(:no_number) { 'password' }
+
+         it 'adds an error to the model record' do
+           subject.password = too_short
+           subject.valid?
+           expect(subject.errors[:password]).to_not be_empty
          end
 
-         it 'add errors to the model object' do
+         it 'adds an error to the model record' do
+           subject.password = no_number
+           subject.valid?
            expect(subject.errors[:password]).to_not be_empty
+         end
+       end
+
+       context 'which are good enough for heaven' do
+         before do
+           subject.password = 'password22'
+           subject.valid?
+         end
+
+         it 'adds an error to the model record' do
+           p subject.errors
+           expect(subject.errors[:password]).to be_empty
          end
        end
      end

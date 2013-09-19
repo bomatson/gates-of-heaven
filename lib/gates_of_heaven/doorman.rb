@@ -1,12 +1,17 @@
 module GatesOfHeaven
   class Doorman
+    def initialize(password)
+      @password = password.dup
+    end
 
-    def self.guard(password)
+    def guard
       case
-      when password.length <= 6
-        raise ArgumentError, 'Password too short'
-      when !password.match(/\/d/)
-        raise ArgumentError, 'Password needs numbers'
+      when @password.length <= 6
+        'Password too short'
+      when !@password.match(/\d/)
+        'Password needs numbers'
+      else
+        nil
       end
     end
   end
