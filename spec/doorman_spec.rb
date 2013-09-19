@@ -2,13 +2,13 @@ require 'gates_of_heaven'
 
 describe GatesOfHeaven::Doorman do
   context '#guard' do
-    subject { GatesOfHeaven::Doorman.guard(password) }
+    subject { GatesOfHeaven::Doorman.new(password) }
 
     context 'given a password with less than 6 characters' do
       let(:password) { 'pass' }
 
       it 'will raise an ArgumentError' do
-        expect{ subject }.to raise_error(ArgumentError, 'Password too short')
+        expect( subject.guard ).to eq 'Password too short'
       end
     end
 
@@ -16,7 +16,7 @@ describe GatesOfHeaven::Doorman do
       let(:password) { 'password' }
 
       it 'raises an error if there are no numbers' do
-        expect{ subject }.to raise_error(ArgumentError, 'Password needs numbers')
+        expect( subject.guard ).to eq 'Password needs numbers'
       end
     end
   end
