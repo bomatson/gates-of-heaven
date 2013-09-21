@@ -30,6 +30,12 @@ But not so easy to pass through them!
 
 ![Gates of Heaven](http://img5.joyreactor.com/pics/post/auto-cat-animals-heaven-346025.jpeg "Gates of Heaven")
 
+## CLI
+
+There's also a CLI tool included, allowing you to spot check passwords:
+
+    $ gates doorman [password]
+
 ## Next up
 
 Right now, the Gates only check whether the length is less than 6,
