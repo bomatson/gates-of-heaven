@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = GatesOfHeaven::VERSION
   spec.authors       = ["Bobby Matson"]
   spec.email         = ["bobby.matson@gmail.com"]
-  spec.description   = %q{This gem will tell you whether your password is garbage or not}
-  spec.summary       = %q{Check password strength ala ActiveRecord Validators}
+  spec.description   = %q{Check password strength ala ActiveModel Validators}
+  spec.summary       = %q{This gem hooks into ActiveModel::Validators to determine password strength. It is intended to be used with Ruby on Rails}
   spec.homepage      = "http://www.github.com/bomatson/gates-of-heaven"
   spec.license       = "MIT"
 
