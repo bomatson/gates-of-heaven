@@ -6,11 +6,11 @@ require 'gates_of_heaven/version'
 Gem::Specification.new do |spec|
   spec.name          = "gates_of_heaven"
   spec.version       = GatesOfHeaven::VERSION
-  spec.authors       = ["bomatson"]
-  spec.email         = ["bobby@carbonfive.com"]
+  spec.authors       = ["Bobby Matson"]
+  spec.email         = ["bobby.matson@gmail.com"]
   spec.description   = %q{This gem will tell you whether your password is garbage or not}
-  spec.summary       = %q{Check password strength server-side}
-  spec.homepage      = ""
+  spec.summary       = %q{Check password strength ala ActiveRecord Validators}
+  spec.homepage      = "http://www.github.com/bomatson/gates-of-heaven"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

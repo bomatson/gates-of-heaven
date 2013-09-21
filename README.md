@@ -1,6 +1,7 @@
 # GatesOfHeaven
 
-TODO: Write a gem description
+Gates Of Heaven allows you to check password strength for any ActiveModel password
+It is most useful when using Ruby On Rails!
 
 ## Installation
 
@@ -18,7 +19,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+It's dead simple to use the Gates:
+
+    User < ActiveRecord::Base
+    attr_accessor :password
+
+    validates :password, gates_of_heaven: true
+
+But not so easy to pass through them!
+
+![Gates of Heaven](http://img5.joyreactor.com/pics/post/auto-cat-animals-heaven-346025.jpeg "Gates of Heaven")
+
+## Next up
+
+Right now, the Gates only check whether the length is less than 6,
+and that the password contains digits.
+
+I intend to have the Gates do a match against a library of the most commonly used passwords.
+Suggestions and pull requests are welcome!
 
 ## Contributing
 
