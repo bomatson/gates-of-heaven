@@ -8,6 +8,9 @@ module GatesOfHeaven
     def doorman(password)
       pass = GatesOfHeaven::Doorman.new(password)
       puts pass.guard
+      if pass.guard.nil?
+        puts 'Nice password, skipper'
+      end
     end
   end
 end

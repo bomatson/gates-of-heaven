@@ -10,3 +10,7 @@ Feature: Doorman
   Scenario: Password does not have numbers
     When I run `gates doorman password`
     Then the output should contain "Password needs numbers"
+
+  Scenario: Password is legit
+    When I run `gates doorman password22`
+    Then the output should contain "Nice password, skipper"
