@@ -6,7 +6,8 @@ module GatesOfHeaven
 
     desc "doorman PASSWORD", "Determines if the password is worthy of heaven"
     def doorman(password)
-      puts GatesOfHeaven::Doorman.guard(password)
+      pass = GatesOfHeaven::Doorman.new(password)
+      puts pass.guard
     end
   end
 end

@@ -1,4 +1,3 @@
-require 'bundler/setup'
 require 'gates_of_heaven'
 require 'active_model'
 
@@ -41,7 +40,6 @@ module ActiveModel
          end
 
          it 'adds an error to the model record' do
-           p subject.errors
            expect(subject.errors[:password]).to be_empty
          end
        end
