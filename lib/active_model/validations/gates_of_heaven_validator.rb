@@ -4,9 +4,9 @@ module ActiveModel
   module Validations
     class GatesOfHeavenValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
-        pass = GatesOfHeaven::Doorman.new(record.password)
-        if pass.guard.present?
-          record.errors.add(:password, pass.guard)
+        error_message = GatesOfHeaven.validate(record.password)
+        if error_message
+          record.errors.add(:password, error_message)
         end
       end
     end
