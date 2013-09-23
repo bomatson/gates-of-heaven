@@ -1,7 +1,7 @@
 module GatesOfHeaven
   class Doorman
     def initialize(password)
-      @password = password.dup
+      @password = password
     end
 
     def guard
